@@ -1,6 +1,3 @@
-# ReadMeGenerator
-Professional ReadMe Generator
-
 # <Your-Project-Title>
 
 ## Description

@@ -1,5 +1,5 @@
 const fs = require("fs");
-const inquirer = require("inquirer");
+const inquirer = require('inquirer');
 
 inquirer
   .prompt([
@@ -47,10 +47,10 @@ inquirer
   ])
   .then((answers) => {
     console.log(answers);
-    const readmeContent = generateReadme(
-      ' # ${answers.title}',
+    const readmeContent =
+      ` # ${answers.title}
 
-      ' ## Description',
+       ## Description'
 
       ${answers.description}
     
@@ -86,8 +86,8 @@ inquirer
       Github ${answers.github}
       Email me at ${answers.email}
 
-     '
-      )
+     `
+    
 
     fs.writeFileSync("README.md", readmeContent, (err) =>
       err ? console.error(err) : console.log("success!")
